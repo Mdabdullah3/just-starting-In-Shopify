@@ -266,10 +266,13 @@
 
     {% comment %} Header group sections {% endcomment %}
 
+    {%  sections 'header-group'  %} 
+
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
 
+    {% sections 'footer-group' %}
     {% comment %} Footer group sections {% endcomment %}
 
     <script>
