@@ -8,20 +8,22 @@
  * ------------------------------------------------------------
  */
 {
-    "name": "header-group",
-    "type": "header",
-    "sections": {
-        "announcementBar":{
-            "type": "announcementBar",
-            "settings": {}
-        },
-        "header":{
-            "type": "header",
-            "settings": {}
-        }
+  "name": "header-group",
+  "type": "header",
+  "sections": {
+    "announcementBar": {
+      "type": "announcementBar",
+      "settings": {
+        "message": "got 10 % only limited product"
+      }
     },
-    "order": [
-        "announcementBar",
-        "header"
-    ]
+    "header": {
+      "type": "header",
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcementBar",
+    "header"
+  ]
 }
