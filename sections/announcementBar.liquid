@@ -1,12 +1,17 @@
 <div>
-  <h1>This is announcement bar</h1>
+  <h1>{{section.settings.message}}</h1>
 </div>
 
 {% schema %}
   {
     "name": "Announcement Bar",
     "settings": [
-        
+      {
+        "type": "text",
+        "id": "message",
+        "label": "Announcement text",
+        "default": "25% OFF on all Products"
+      }
     ]
   }
 {% endschema %}
