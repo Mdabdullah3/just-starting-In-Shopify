@@ -8,20 +8,24 @@
  * ------------------------------------------------------------
  */
 {
-    "name": "header-group",
-    "type": "header",
-    "sections": {
-        "announcementBar":{
-            "type": "announcementBar",
-            "settings": {}
-        },
-        "header":{
-            "type": "header",
-            "settings": {}
-        }
+  "name": "header-group",
+  "type": "header",
+  "sections": {
+    "announcementBar": {
+      "type": "announcementBar",
+      "settings": {
+        "message": "25% OFF on all Products"
+      }
     },
-    "order": [
-        "announcementBar",
-        "header"
-    ]
+    "header": {
+      "type": "header",
+      "settings": {
+        "menu": "main-menu"
+      }
+    }
+  },
+  "order": [
+    "announcementBar",
+    "header"
+  ]
 }
