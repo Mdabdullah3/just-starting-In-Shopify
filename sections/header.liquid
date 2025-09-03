@@ -1,7 +1,18 @@
 <div>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="{{shop.url}}">
+        {% if settings.logo != blank %}
+          <img
+            src="{{ settings.logo |  img_url:"small"}}"
+            width="auto"
+            height="auto"
+            alt="logo">
+        {% else %}
+          {{ shop.name }}
+
+        {% endif %}
+      </a>
       <button
         class="navbar-toggler"
         type="button"

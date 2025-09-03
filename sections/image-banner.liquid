@@ -1,7 +1,67 @@
-<div class="image-banner-{{section.id}}">Image Banner tested adeed</div>
+<div class="banner-container">
+  <div>
+    {% if section.settings.image != blank %}
+
+      {{ section.settings.image | image_url: width: 1440 | image_tag: widths: '375,550,750,1080,1536,2048'
+      }}
+
+    {% else %}
+
+      {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+
+    {% endif %}
+
+    <div class="banner-content">
+      <div>
+        <h1>{{ section.settings.title }}</h1>
+        <p>{{ section.settings.subtitle }}</p>
+        <div>
+          <a href="{{ section.settings.url_1 }}">
+            {{ section.settings.label_1 }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% schema %}
-{
-  "name": "Image Banner",
-  "settings": []
-}
+  {
+    "name": "Image Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "image"
+      },
+      {
+        "type": "header",
+        "content": "Banner Content"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title",
+        "default": "Our Best Collection"
+      },
+      {
+        "type": "richtext",
+        "id": "subtitle",
+        "label": "subtitle"
+      }, {
+        "type": "text",
+        "id": "label_1",
+        "label": "button Label",
+        "default": "Buy Now"
+      }, {
+        "type": "url",
+        "id": "url_1",
+        "label": "Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image Banner"
+      }
+    ]
+  }
 {% endschema %}
