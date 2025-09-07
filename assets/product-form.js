@@ -2,7 +2,9 @@ $(document).ready(function () {
     if ($('button[name="add"]').length > 0) {
         $(document).on("click", "button[name='add']", function (e) {
             e.preventDefault();
-            var formData = $(this).closest('.product-form[action="/cart/add"]').serialize();
+
+            var formData = $(this).closest('.product-form').serialize();
+            console.log("Form data:", formData); // Debug
 
             $.ajax({
                 type: 'POST',
@@ -11,11 +13,13 @@ $(document).ready(function () {
                 data: formData,
                 success: function (data) {
                     console.log('data:', data);
-                    getCartDetails();
-                    $('#offcanvasRight').offcanvas('show');
+                    // getCartDetails();
+                    $('#offcanvasWithBothOptions').offcanvas('show');
                 },
-                error: 'Add to cart error!'
-            })
-        })
+                error: function (xhr) {
+                    console.error('Add to cart error:', xhr.responseText);
+                }
+            });
+        });
     }
 });
