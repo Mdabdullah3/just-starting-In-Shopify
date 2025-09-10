@@ -58,12 +58,12 @@
       "settings": {
       }
     },
-    // "recommended-product": {
-    //   "type": "recommended-products",
-    //   "settings": {
-    //     "limit": 4
-    //   }
-    // },
+    "recommended-product": {
+      "type": "recommended-products",
+      "settings": {
+        "limit": 4
+      }
+    },
     // "recently_viewed_DLHzrN": {
     //   "type": "recently-viewed",
     //   "settings": {
@@ -72,7 +72,7 @@
   },
   "order": [
     "main-product",
-    // "recommended-product",
+    "recommended-product",
     // "recently_viewed_DLHzrN"
   ]
 }

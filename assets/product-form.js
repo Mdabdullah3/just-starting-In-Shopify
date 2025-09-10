@@ -13,7 +13,7 @@ $(document).ready(function () {
                 data: formData,
                 success: function (data) {
                     console.log('data:', data);
-                    // getCartDetails();
+                    getCartDetails();
                     $('#offcanvasWithBothOptions').offcanvas('show');
                 },
                 error: function (xhr) {
