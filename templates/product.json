@@ -59,7 +59,7 @@
       }
     },
     "recommended-product": {
-      "type": "recommended-products",
+      "type": "recomended-products",
       "settings": {
         "limit": 4
       }
