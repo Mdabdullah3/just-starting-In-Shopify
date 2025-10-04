@@ -22,3 +22,9 @@ html {
   top: 50%;
   left: 10%;
 }
+div#predictive-search {
+  position: absolute;
+  background: #ffffff;
+  padding: 20px;
+  width: 620px;
+}

@@ -64,15 +64,15 @@
         "limit": 4
       }
     },
-    // "recently_viewed_DLHzrN": {
-    //   "type": "recently-viewed",
-    //   "settings": {
-    //   }
-    // }
+    "recently_viewed_DLHzrN": {
+      "type": "recently-viewed",
+      "settings": {
+      }
+    }
   },
   "order": [
     "main-product",
     "recommended-product",
-    // "recently_viewed_DLHzrN"
+    "recently_viewed_DLHzrN"
   ]
 }
